@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('peminjamen', function (Blueprint $table) {
+        Schema::create('peminjaman', function (Blueprint $table) {
             $table->id();
             $table->string('nama_peminjam', 45);
             $table->string('ktp_peminjam', 20);
@@ -19,9 +19,9 @@ return new class extends Migration
             $table->date('mulai');
             $table->date('selesai');
             $table->double('biaya');
-            $table->foreignId('armada_id')->constrained('armadas');
+            $table->foreignId('armada_id')->constrained('armada');
             $table->string('komentar_peminjam', 100)->nullable();
-            string('status_pinjam', 20);
+            $table->string('status_pinjam', 20);
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('peminjamen');
+        Schema::dropIfExists('peminjamans');
     }
 };
