@@ -17,7 +17,6 @@ class Peminjaman extends Model
      * Nama tabel yang terkait dengan model.
      * Penting agar sesuai dengan nama di file migrasi.
      */
-    protected $table = 'peminjamen';
 
     /**
      * Atribut yang dapat diisi secara massal.
