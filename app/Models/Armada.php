@@ -1,4 +1,5 @@
 <?php
+<?php
 
 namespace App\Models;
 
@@ -10,11 +11,8 @@ class Armada extends Model
 {
     use HasFactory;
 
-    /**
-     * Nama tabel yang terkait dengan model.
-     * PERBAIKAN: Mengganti 'armada' menjadi 'armadas' agar sesuai dengan migrasi.
-     */
-    protected $table = 'armadas';
+    // Hanya satu deklarasi $table, sesuaikan dengan nama tabel di migration
+    protected $table = 'armada';
 
     /**
      * The attributes that are mass assignable.
