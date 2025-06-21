@@ -13,9 +13,14 @@ return new class extends Migration
     {
         Schema::create('pembayarans', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggal');
-            $table->double('jimlah_bayar');
-            $table->foreignId('peminjam_id')->constrained('peminjaman');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('armada_id')->constrained('armadas')->onDelete('cascade');
+            $table->date('tanggal_mulai');
+            $table->date('tanggal_selesai');
+            $table->decimal('total_harga', 10, 2);
+            $table->string('bukti_pembayaran')->nullable();
+            $table->enum('status_pembayaran', ['pending', 'lunas', 'dibatalkan'])->default('pending');
+            $table->string('metode_pembayaran')->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +30,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        // PERBAIKAN: Mengganti 'armadas' menjadi 'pembayarans'
         Schema::dropIfExists('pembayarans');
     }
 };

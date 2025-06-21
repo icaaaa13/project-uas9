@@ -17,13 +17,26 @@ class JenisKendaraanResource extends Resource
 {
     protected static ?string $model = JenisKendaraan::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    // Mengganti nama di navigasi agar lebih rapi
+    protected static ?string $modelLabel = 'Jenis Kendaraan';
+    protected static ?string $pluralModelLabel = 'Jenis Kendaraan';
+
+    protected static ?string $navigationIcon = 'heroicon-o-tag';
+
+    
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Section::make()
+                    ->schema([
+                        Forms\Components\TextInput::make('nama')
+                            ->required()
+                            ->maxLength(20)
+                            ->unique(ignoreRecord: true) // Memastikan nama unik
+                            ->label('Nama Jenis Kendaraan'),
+                    ]),
             ]);
     }
 
@@ -31,13 +44,27 @@ class JenisKendaraanResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('nama')
+                    ->searchable()
+                    ->sortable(),
+                
+                // Menampilkan jumlah armada yang terkait dengan jenis ini
+                Tables\Columns\TextColumn::make('armadas_count')
+                    ->counts('armadas')
+                    ->label('Jumlah Armada')
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime('d M Y, H:i')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                // Tidak perlu filter untuk tabel sederhana ini
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
       <!-- basic -->
       <meta charset="utf-8">
@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Oberlo</title>
+      <title>Garuda Rent</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -33,43 +33,55 @@
    <body>
       <!-- header section strats -->
       <header class="header_section">
-        <div class="container">
+         <div class="container">
             <nav class="navbar navbar-expand-lg custom_nav-container ">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class=""> </span>
-                </button>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class=""> </span>
+               </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav  ">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""> Models </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""> About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link navbar-brand" href=""> <span><span>OB</span>erlo</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""> Price</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""> Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="">Contact </a>
-                        </li>
-                    </ul>
-                </div>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav  ">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#"> Models </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#"> About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="#"> <span><span>Garuda</span>Rent</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#"> Price</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#"> Blog</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link " href="#">Contact </a>
+                     </li>
+                     <!-- Blok Login/Dashboard/Register disisipkan di sini -->
+                     <li class="nav-item">
+                        @auth
+                            <a href="{{ url('/admin') }}" class="nav-link" style="font-weight: bold; color: #fc9d22;">
+                                Dashboard
+                            </a>
+                        @else
+                            <a href="{{ url('/admin/login') }}" class="nav-link" style="font-weight: bold; color: #fc9d22;">
+                                Log in
+                            </a>
+                        @endauth
+                     </li>
+                  </ul>
+               </div>
             </nav>
          </div>
       </header>
       <!-- end header section -->
-      <!-- banner section start --> 
+      <!-- ... sisa kode HTML Anda ... -->
       <div class="banner_section layout_padding">
          <div class="container-fluid">
             <div class="row">
@@ -78,30 +90,20 @@
                      <div class="carousel-inner">
                         <div class="carousel-item active">
                            <div class="banner_taital_main">
-                              <h1 class="banner_taital">New<br> Model Cars</h1>
-                              <p class="banner_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt uolore magna aliqua. Ut enim ad minim veniam, quis non</p>
+                              <h1 class="banner_taital">Sewa<br> Mobil Terbaik</h1>
+                              <p class="banner_text">Solusi perjalanan Anda dengan armada terbaik dan layanan profesional. Jelajahi Indonesia dengan nyaman bersama kami.</p>
                               <div class="form-group">
-                                 <input type="text" class="update_mail" placeholder="Search here" name="Search here">
+                                 <input type="text" class="update_mail" placeholder="Cari mobil..." name="Search here">
                                  <div class="subscribe_bt"><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
                               </div>
                            </div>
                         </div>
                         <div class="carousel-item">
                            <div class="banner_taital_main">
-                              <h1 class="banner_taital">New<br> Model Cars</h1>
-                              <p class="banner_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt uolore magna aliqua. Ut enim ad minim veniam, quis non</p>
+                              <h1 class="banner_taital">Armada<br> Lengkap & Terawat</h1>
+                              <p class="banner_text">Dari mobil keluarga hingga mobil mewah, semua armada kami dalam kondisi prima untuk menjamin keamanan dan kenyamanan Anda.</p>
                               <div class="form-group">
-                                 <input type="text" class="update_mail" placeholder="Search here" name="Search here">
-                                 <div class="subscribe_bt"><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="banner_taital_main">
-                              <h1 class="banner_taital">New<br> Model Cars</h1>
-                              <p class="banner_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt uolore magna aliqua. Ut enim ad minim veniam, quis non</p>
-                              <div class="form-group">
-                                 <input type="text" class="update_mail" placeholder="Search here" name="Search here">
+                                 <input type="text" class="update_mail" placeholder="Cari mobil..." name="Search here">
                                  <div class="subscribe_bt"><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
                               </div>
                            </div>
@@ -116,239 +118,16 @@
                   </div>
                </div>
                <div class="col-md-6 padding_right0">
-                  <div class="banner_img"><img src="images/banner-img.png"></div>
+                  <div class="banner_img"><img src="images/banner-img.png" alt="Banner Mobil"></div>
                </div>
             </div>
          </div>
       </div>
-      <!-- banner section end -->
-      <!-- about section start -->
-      <div class="about_section layout_padding">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-md-6">
-                  <div class="about_img"><img src="images/about-img.png"></div>
-               </div>
-               <div class="col-md-6">
-                  <h3 class="about_taital">About Shoroom</h3>
-                    <p class="about_text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitationconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                    <div class="readmore_btn"><a href="#">Read More<span class="arrow_icon"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- about section end -->
-      <!-- models section start -->
-      <div class="models_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="models_taital">Our Models  Cars</h1>
-               </div>
-            </div>
-            <div class="models_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="models_img"><img src="images/img-1.png"></div>
-                  </div>
-                  <div class="col-md-6">
-                     <h3 class="carolo_text"><span class="number_text">01</span> New Carolo car</h3>
-                     <p class="ullamco_text">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-                     <div class="price_main">
-                        <p class="price_text"><span style="color: #fc9d22;">Price</span> $30000.00</p>
-                        <div class="read_btn"><a href="#">Read More<span class="arrow_icon"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="models_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <h3 class="carolo_text"><span class="number_text">02</span> New Carolo car</h3>
-                     <p class="ullamco_text">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-                     <div class="price_main">
-                        <p class="price_text"><span style="color: #fc9d22;">Price</span> $30000.00</p>
-                        <div class="read_btn"><a href="#">Read More<span class="arrow_icon"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></div>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="models_img"><img src="images/img-2.png"></div>
-                  </div>
-               </div>
-            </div>
-            <div class="models_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="models_img"><img src="images/img-3.png"></div>
-                  </div>
-                  <div class="col-md-6">
-                     <h3 class="carolo_text"><span class="number_text">03</span> New Carolo car</h3>
-                     <p class="ullamco_text">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-                     <div class="price_main">
-                        <p class="price_text"><span style="color: #fc9d22;">Price</span> $30000.00</p>
-                        <div class="read_btn"><a href="#">Read More<span class="arrow_icon"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- models section end -->
-      <div class="choose_section_2">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-3 col-sm-6">
-                     <h1 class="rated_text"><span class="padding_10"><img src="images/icon-1.png"></span>3700</h1>
-                     <p class="house_text">Happy Clients</p>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <h1 class="rated_text"><span class="padding_10"><img src="images/icon-2.png"></span>5700</h1>
-                     <p class="house_text">Vehicles In Stock</p>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <h1 class="rated_text"><span class="padding_10"><img src="images/icon-3.png"></span>124</h1>
-                     <p class="house_text">Awards</p>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <h1 class="rated_text"><span class="padding_10"><img src="images/icon-4.png"></span>704</h1>
-                     <p class="house_text">Dealer Branches</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      <!-- blog section start -->
-      <div class="blog_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="blog_taital">FEATURED VEHICLES</h1>
-               </div>
-            </div>
-            <div class="blog_section_2">
-               <div class="row">
-                  <div class="col-md-4">
-                     <div class="blog_img"><img src="images/img-4.png"></div>
-                     <div class="btn_main">
-                        <div class="date_text"><a href="#">Price $ 40000.0</a></div>
-                     </div>
-                     <div class="blog_box">
-                        <h3 class="blog_text">Voluptate</h3>
-                        <p class="lorem_text">Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </p>
-                     </div>
-                     <div class="read_bt"><a href="#">Read More<span class="arrow_icon"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="blog_img"><img src="images/img-5.png"></div>
-                     <div class="btn_main">
-                        <div class="date_text active"><a href="#">Price $ 40000.0</a></div>
-                     </div>
-                     <div class="blog_box">
-                        <h3 class="blog_text">Voluptate</h3>
-                        <p class="lorem_text">Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </p>
-                     </div>
-                     <div class="read_bt active"><a href="#">Read More<span class="arrow_icon"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="blog_img"><img src="images/img-6.png"></div>
-                     <div class="btn_main">
-                        <div class="date_text"><a href="#">Price $ 40000.0</a></div>
-                     </div>
-                     <div class="blog_box">
-                        <h3 class="blog_text">Voluptate</h3>
-                        <p class="lorem_text">Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </p>
-                     </div>
-                     <div class="read_bt"><a href="#">Read More<span class="arrow_icon"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- blog section end -->
-      <!-- client section start -->
-      <div class="client_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="client_taital">What Says Our Students</h1>
-                  <p class="client_text">It is a long established fact that a reader will be distracted by the readable c</p>
-               </div>
-            </div>
-            <div class="customer_section_2">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <div class="box_main">
-                           <div class="customer_main">
-                              <div class="customer_left">
-                                 <div class="customer_img"><img src="images/client-img.png"></div>
-                              </div>
-                              <div class="customer_right">
-                                 <h3 class="customer_name">DenoMark</h3>
-                                 <p class="enim_text">anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internetanything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet</p>
-                                 <div class="quick_icon"><img src="images/quick-icon.png"></div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- client section end -->
-      <!-- contact section start -->
-      <div class="contact_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="contact_taital">Get In Touch</h1>
-               </div>
-            </div>
-            <div class="contact_section_2">
-               <div class="mail_section map_form_container">
-                  <form action="">
-                  <input type="text" class="mail_text" placeholder="Name" name="Name">
-                  <input type="text" class="mail_text" placeholder="Phone Number" name="Phone Number"> 
-                  <input type="text" class="mail_text" placeholder="Email" name="Email">
-                  <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                  <div class="map_btn_main">
-                     <div class="send_bt"><a href="#">Send Now</a></div>
-                     <div class="map_bt"><a href="#" id="showMap">Map</a></div>
-                  </div>
-                  </form>
-                  <div class="map_main map_container">
-                     <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="368" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-                         <div class="map_btn_main">
-                           <div class="map_bt d-flex justify-content-center w-100 map_center"><a href="#" id="showForm">Form</a></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="location_main">
-               <div class="location_text">
-                  <ul>
-                     <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_15">(+71) 8522369417</span></a></li>
-                     <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_15">demo@gmail.com</span></a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="social_icon">
-               <ul>
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      <!-- contact section end -->
+      <!-- ... sisa kode HTML Anda ... -->
       <!-- copyright section start -->
       <div class="copyright_section">
          <div class="container">
-            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free Html Templates</a>. DIstributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+            <p class="copyright_text">© 2025 All Rights Reserved. Design by <a href="https://html.design">Free Html Templates</a>. Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
          </div>
       </div>
       <!-- copyright section end -->
