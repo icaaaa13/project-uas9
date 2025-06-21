@@ -17,7 +17,11 @@ return new class extends Migration
             $table->string('nopol', 20);
             $table->integer('thn_beli');
             $table->string('deskripsi', 200);
-            $table->foreignId('jenis_kendaraan_id')->constrained('jenis_kendaraan');
+            
+            // Ini adalah baris KUNCI yang harus benar.
+            // Pastikan Anda merujuk ke tabel 'jenis_kendaraans' (dengan 's').
+            $table->foreignId('jenis_kendaraan_id')->constrained('jenis_kendaraans')->onDelete('cascade');
+            
             $table->integer('kapasitas_kursi');
             $table->integer('rating');
             $table->timestamps();
