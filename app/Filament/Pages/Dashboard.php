@@ -12,6 +12,7 @@ class Dashboard extends BaseDashboard
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
     protected static string $view = 'filament.pages.dashboard';
 
+    // Properti public ini akan otomatis tersedia di file view Blade
     public int $carCount = 0;
     public int $orderCount = 0;
 
