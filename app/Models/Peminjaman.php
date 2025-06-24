@@ -8,13 +8,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Peminjaman extends Model
 {
+//HEAD
+    protected $table = 'peminjaman';
+
     use HasFactory;
 
     /**
      * Nama tabel yang terkait dengan model.
      * Penting agar sesuai dengan nama di file migrasi.
      */
-    protected $table = 'peminjamen';
 
     /**
      * Atribut yang dapat diisi secara massal.
@@ -43,5 +45,5 @@ class Peminjaman extends Model
     public function armada(): BelongsTo
     {
         return $this->belongsTo(Armada::class, 'armada_id');
-    }
+//dd81d6aa82aaf381a9d2a592656892d9bfe9ad2b
 }
