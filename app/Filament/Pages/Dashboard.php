@@ -1,12 +1,22 @@
 <?php
+// Lokasi: app/Filament/Pages/Dashboard.php
 
 namespace App\Filament\Pages;
 
-use Filament\Pages\Page;
+use Filament\Pages\Dashboard as BaseDashboard;
+use App\Models\Armada;      // Pastikan ini di-import
+use App\Models\Peminjaman; // Pastikan ini di-import
 
-class Dashboard extends Page
+class Dashboard extends BaseDashboard
 {
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    // Properti public ini akan otomatis tersedia di file view Blade
+    public int $carCount = 0;
+    public int $orderCount = 0;
 
-    protected static string $view = 'filament.pages.dashboard';
+    // Metode ini akan dijalankan untuk mengisi data
+    public function mount(): void
+    {
+        $this->carCount = Armada::count();
+        $this->orderCount = Peminjaman::count();
+    }
 }
