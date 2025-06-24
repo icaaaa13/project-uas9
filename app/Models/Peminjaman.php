@@ -45,5 +45,6 @@ class Peminjaman extends Model
     public function armada(): BelongsTo
     {
         return $this->belongsTo(Armada::class, 'armada_id');
-//dd81d6aa82aaf381a9d2a592656892d9bfe9ad2b
+    //dd81d6aa82aaf381a9d2a592656892d9bfe9ad2b
+    }
 }
