@@ -110,7 +110,7 @@
                   </div>
                </div>
                <div class="col-md-6 padding_right0">
-                  <div class="banner_img"><img src="https://placehold.co/839x529/EFEFEF/333333?text=Garuda+Rent+Car" alt="Rental Mobil Garuda Rent"></div>
+                  <div class="banner_img"><img src="{{ asset('images/toyotaalphard.png') }}" alt="Rental Mobil Garuda Rent"></div>
                </div>
             </div>
          </div>
@@ -121,7 +121,7 @@
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-6">
-                  <div class="about_img"><img src="https://placehold.co/600x420/333333/FFFFFF?text=Kenapa+Kami%3F" alt="Tentang Garuda Rent"></div>
+                  <div class="about_img"><img src="{{ asset('images/famili.png') }}" alt="famili"></div>
                </div>
                <div class="col-md-6">
                   <h3 class="about_taital">Kenapa Memilih Garuda Rent?</h3>
@@ -148,7 +148,7 @@
             <div class="models_section_2">
                <div class="row">
                   <div class="col-md-6">
-                     <div class="models_img"><img src="https://placehold.co/530x300/EFEFEF/333333?text=Toyota+Avanza" alt="Sewa Mobil Avanza"></div>
+                     <div class="models_img"><img src="{{ asset('images/avanza.png') }}" alt="avanza"></div>
                   </div>
                   <div class="col-md-6">
                      <h3 class="carolo_text"><span class="number_text">01</span> Family MPV</h3>
@@ -171,14 +171,14 @@
                      </div>
                   </div>
                   <div class="col-md-6">
-                     <div class="models_img"><img src="https://placehold.co/530x300/EFEFEF/333333?text=Honda+Brio" alt="Sewa Mobil Brio"></div>
+                     <div class="models_img"><img src="{{ asset('images/honda.png') }}" alt="honda"></div>
                   </div>
                </div>
             </div>
             <div class="models_section_2">
                 <div class="row">
                    <div class="col-md-6">
-                      <div class="models_img"><img src="https://placehold.co/530x300/EFEFEF/333333?text=Toyota+Fortuner" alt="Sewa Mobil Fortuner"></div>
+                      <div class="models_img"><img src="{{ asset('images/fortuner.png') }}" alt="fortuner"></div>
                    </div>
                    <div class="col-md-6">
                       <h3 class="carolo_text"><span class="number_text">03</span> Premium SUV</h3>
@@ -204,7 +204,7 @@
             <div class="blog_section_2">
                <div class="row">
                   <div class="col-md-4">
-                     <div class="blog_img"><img src="https://placehold.co/350x220/333333/FFFFFF?text=24+Jam" alt="Sewa Mobil Harian"></div>
+                     <div class="blog_img"><img src="{{ asset('images/ima.jpeg') }}" alt="ima"></div>
                      <div class="btn_main">
                         <div class="date_text active"><a href="#">Sewa Harian</a></div>
                      </div>
@@ -214,7 +214,7 @@
                      </div>
                   </div>
                   <div class="col-md-4">
-                     <div class="blog_img"><img src="https://placehold.co/350x220/333333/FFFFFF?text=Bandara" alt="Antar Jemput Bandara"></div>
+                     <div class="blog_img"><img src="{{ asset('images/ba.avif') }}" alt="ba"></div>
                      <div class="btn_main">
                         <div class="date_text active"><a href="#">Antar-Jemput Bandara</a></div>
                      </div>
@@ -224,7 +224,7 @@
                      </div>
                   </div>
                   <div class="col-md-4">
-                     <div class="blog_img"><img src="https://placehold.co/350x220/333333/FFFFFF?text=Acara+Spesial" alt="Sewa Mobil Pernikahan"></div>
+                     <div class="blog_img"><img src="{{ asset('images/da.jpeg') }}" alt="da"></div>
                      <div class="btn_main">
                         <div class="date_text active"><a href="#">Mobil Pernikahan</a></div>
                      </div>
@@ -254,7 +254,7 @@
                         <div class="box_main">
                            <div class="customer_main">
                               <div class="customer_left">
-                                 <div class="customer_img"><img src="https://placehold.co/120x120/EFEFEF/333333?text=Budi" alt="Testimoni Pelanggan"></div>
+                                 <div class="customer_img"><img src="{{ asset('images/budigi.jpeg') }}" alt="budi"></div>
                               </div>
                               <div class="customer_right">
                                  <h3 class="customer_name">Budi Santoso</h3>
