@@ -10,22 +10,12 @@ class JenisKendaraan extends Model
 {
     use HasFactory;
 
-    /**
-     * Nama tabel yang terkait dengan model.
-     */
-    protected $table = 'jenis_kendaraans';
+    protected $table = 'jenis_kendaraan';
 
-    /**
-     * Atribut yang dapat diisi secara massal.
-     * Baris inilah yang akan memperbaiki error Anda.
-     */
     protected $fillable = [
         'nama',
     ];
 
-    /**
-     * Mendefinisikan relasi "satu ke banyak" dengan model Armada.
-     */
     public function armadas(): HasMany
     {
         return $this->hasMany(Armada::class, 'jenis_kendaraan_id');

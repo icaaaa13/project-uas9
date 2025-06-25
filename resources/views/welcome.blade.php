@@ -254,7 +254,7 @@
                         <div class="box_main">
                            <div class="customer_main">
                               <div class="customer_left">
-                                 <div class="customer_img"><img src="{{ asset('images/budigi.jpeg') }}" alt="budi"></div>
+                                 <div class="customer_img"><img src="{{ asset('images/budi.jpeg') }}" alt="budi"></div>
                               </div>
                               <div class="customer_right">
                                  <h3 class="customer_name">Budi Santoso</h3>
